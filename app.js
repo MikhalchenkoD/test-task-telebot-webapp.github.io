@@ -16,7 +16,7 @@ btnMario.addEventListener("click", function(){
 	}
 	else {
 		tg.MainButton.setText("Вы выбрали Марио!");
-		item = "mario";
+		item = "1";
 		tg.MainButton.show();
 	}
 });
@@ -27,14 +27,13 @@ btnAlbert.addEventListener("click", function(){
 	}
 	else {
 		tg.MainButton.setText("Вы выбрали Альберта Энштейна!");
-		item = "albert";
+		item = "2";
 		tg.MainButton.show();
 	}
 });
 
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
-    console.log("Main button clicked!");
     tg.sendData(item);
 });
 
